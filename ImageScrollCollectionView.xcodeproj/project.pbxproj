@@ -13,6 +13,8 @@
 		7BA1037D26B497D800C657E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA1037B26B497D800C657E9 /* Main.storyboard */; };
 		7BA1037F26B497DE00C657E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA1037E26B497DE00C657E9 /* Assets.xcassets */; };
 		7BA1038226B497DE00C657E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA1038026B497DE00C657E9 /* LaunchScreen.storyboard */; };
+		7BA1038A26B49A4000C657E9 /* GalleryUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA1038926B49A4000C657E9 /* GalleryUICollectionView.swift */; };
+		7BA1038C26B49C1000C657E9 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA1038B26B49C1000C657E9 /* GalleryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7BA1037E26B497DE00C657E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BA1038126B497DE00C657E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BA1038326B497DE00C657E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BA1038926B49A4000C657E9 /* GalleryUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryUICollectionView.swift; sourceTree = "<group>"; };
+		7BA1038B26B49C1000C657E9 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				7BA1037E26B497DE00C657E9 /* Assets.xcassets */,
 				7BA1038026B497DE00C657E9 /* LaunchScreen.storyboard */,
 				7BA1038326B497DE00C657E9 /* Info.plist */,
+				7BA1038926B49A4000C657E9 /* GalleryUICollectionView.swift */,
+				7BA1038B26B49C1000C657E9 /* GalleryCollectionViewCell.swift */,
 			);
 			path = ImageScrollCollectionView;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BA1037A26B497D800C657E9 /* ViewController.swift in Sources */,
+				7BA1038C26B49C1000C657E9 /* GalleryCollectionViewCell.swift in Sources */,
+				7BA1038A26B49A4000C657E9 /* GalleryUICollectionView.swift in Sources */,
 				7BA1037626B497D800C657E9 /* AppDelegate.swift in Sources */,
 				7BA1037826B497D800C657E9 /* SceneDelegate.swift in Sources */,
 			);

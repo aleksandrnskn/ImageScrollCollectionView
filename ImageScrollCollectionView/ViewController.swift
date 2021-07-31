@@ -9,9 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    private var galleryCollectionViewCell = GalleryCollectionViewCell()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        view.addSubview(galleryCollectionViewCell)
+        
+        galleryCollectionViewCell.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        galleryCollectionViewCell.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        galleryCollectionViewCell.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16).isActive = true
+        
+        galleryCollectionViewCell.heightAnchor.constraint(equalToConstant: 320).isActive = true
+        
     }
 
 
