@@ -14,18 +14,25 @@ class GalleryUICollectionView: UICollectionView {
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = Constants.lineSpacing
         super.init(frame: .zero, collectionViewLayout: layout)
         
-        backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         delegate = self
         dataSource = self
         register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.reuseId)
         
+        contentInset = UIEdgeInsets(top: 0, left: Constants.left, bottom: 0, right: Constants.right)
+        
+        showsHorizontalScrollIndicator = false
+        showsVerticalScrollIndicator = false
+        
         translatesAutoresizingMaskIntoConstraints = false
+        layoutIfNeeded()
     }
     
-    func set(images: [String]) {
+    func setImage(images: [String]) {
         self.images = images
     }
     
@@ -37,15 +44,16 @@ class GalleryUICollectionView: UICollectionView {
 extension GalleryUICollectionView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseId, for: indexPath)
+        let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseId, for: indexPath) as! GalleryCollectionViewCell
+        cell.imageV.loadImage(urlString: images[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 144, height: 288)
+        return CGSize(width: Constants.itemWidth, height: frame.height * 0.9)
     }
 }
