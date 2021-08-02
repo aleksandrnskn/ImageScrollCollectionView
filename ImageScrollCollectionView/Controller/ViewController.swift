@@ -24,9 +24,11 @@ class ViewController: UIViewController {
         
         view.addSubview(galleryCollectionView)
         
-        galleryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        galleryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                                       constant: 8).isActive = true
         galleryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        galleryCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16).isActive = true
+        galleryCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,
+                                                   constant: 16).isActive = true
         
         galleryCollectionView.heightAnchor.constraint(equalToConstant: 240).isActive = true
         

@@ -54,18 +54,3 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-extension UIImageView {
-    func loadImage(urlString: String)  {
-        let url =  URL(string: urlString)!
-        URLSession.shared.dataTask(with: url, completionHandler: { (data, respones, error) in
-            if error != nil {
-                print(error ?? "")
-                return
-            }
-            DispatchQueue.main.async {
-                self.image = UIImage(data: data!)
-            }
-        }).resume()
-    }
-}

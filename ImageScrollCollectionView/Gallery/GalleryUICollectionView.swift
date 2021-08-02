@@ -23,7 +23,10 @@ class GalleryUICollectionView: UICollectionView {
         dataSource = self
         register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.reuseId)
         
-        contentInset = UIEdgeInsets(top: 0, left: Constants.left, bottom: 0, right: Constants.right)
+        contentInset = UIEdgeInsets(top: 0,
+                                    left: Constants.left,
+                                    bottom: 0,
+                                    right: Constants.right)
         
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
@@ -33,6 +36,7 @@ class GalleryUICollectionView: UICollectionView {
     }
     
     func setImage(images: [String]) {
+        
         self.images = images
     }
     
@@ -41,19 +45,29 @@ class GalleryUICollectionView: UICollectionView {
     }
 }
 
-extension GalleryUICollectionView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension GalleryUICollectionView: UICollectionViewDataSource,
+                                   UICollectionViewDelegate,
+                                   UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        
         return images.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseId, for: indexPath) as! GalleryCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseId,
+                                       for: indexPath) as! GalleryCollectionViewCell
         cell.imageV.loadImage(urlString: images[indexPath.row])
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         return CGSize(width: Constants.itemWidth, height: frame.height * 0.9)
     }
 }

@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-637" y="114"/>
         </scene>
-        <!--Kарусель изоброжений-->
+        <!--Kарусель-->
         <scene sceneID="3wZ-wc-wH4">
             <objects>
                 <viewController id="vOg-HZ-dAg" customClass="ViewController" customModule="ImageScrollCollectionView" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Похожее" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDa-6U-97d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Похожие" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDa-6U-97d">
                                 <rect key="frame" x="16" y="156" width="382" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -47,7 +47,7 @@
                             <constraint firstItem="kDa-6U-97d" firstAttribute="leading" secondItem="dah-Hb-Mbz" secondAttribute="leading" constant="16" id="w64-Ao-NKT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kарусель изоброжений" id="tOj-OX-Vhc">
+                    <navigationItem key="navigationItem" title="Kарусель" id="tOj-OX-Vhc">
                         <barButtonItem key="backBarButtonItem" title=" " id="QFM-Ku-8Q8"/>
                     </navigationItem>
                     <connections>
