@@ -13,12 +13,6 @@ class ViewController: UIViewController {
     
     private var galleryCollectionView = GalleryUICollectionView()
     
-    let temp = ["https://blackstarwear.ru/image/cache/catalog/p/8024/9t0a8178-h_1_630x840.jpg",
-                "https://blackstarwear.ru/image/cache/catalog/p/8109/kiro0348-h_1_630x840.jpg",
-                "https://blackstarwear.ru/image/cache/catalog/p/8047/9t0a4451-h_1_630x840.jpg",
-                "https://blackstarwear.ru/image/cache/catalog/p/8024/9t0a8178-h_1_630x840.jpg",
-                "https://blackstarwear.ru/image/cache/catalog/p/8109/kiro0348-h_1_630x840.jpg",]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +26,7 @@ class ViewController: UIViewController {
         
         galleryCollectionView.heightAnchor.constraint(equalToConstant: 240).isActive = true
         
-        galleryCollectionView.setImage(images: temp)
+        galleryCollectionView.setImage(images: ImageModel.setImages())
         galleryCollectionView.reloadData()
     }
 

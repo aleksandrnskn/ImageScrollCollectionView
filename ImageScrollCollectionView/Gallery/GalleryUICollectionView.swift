@@ -9,7 +9,7 @@ import UIKit
 
 class GalleryUICollectionView: UICollectionView {
     
-    var images = [String]()
+    var images = [ImageModel]()
 
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -35,7 +35,7 @@ class GalleryUICollectionView: UICollectionView {
         layoutIfNeeded()
     }
     
-    func setImage(images: [String]) {
+    func setImage(images: [ImageModel]) {
         
         self.images = images
     }
@@ -60,7 +60,7 @@ extension GalleryUICollectionView: UICollectionViewDataSource,
         
         let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseId,
                                        for: indexPath) as! GalleryCollectionViewCell
-        cell.imageV.loadImage(urlString: images[indexPath.row])
+        cell.imageV.loadImage(urlString: "https://blackstarwear.ru/" + images[indexPath.row].imageURL)
         return cell
     }
     
